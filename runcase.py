@@ -13,6 +13,9 @@ if __name__ == '__main__':
     suite = unittest.TestLoader().discover('./cases','test*.py')
     # 创建测试套件
     # 输出路径在setting里写
-    with open(TEST_REPORT_PATH,'wb') as f:
-        runner = HTMLTestRunner(f,title='测试报告')
-        runner.run(suite)
+    # with open(TEST_REPORT_PATH,'wb') as f:
+    #     runner = HTMLTestRunner(f,title='测试报告')
+    #     runner.run(suite)
+
+    runner  = unittest.TextTestRunner()
+    runner.run(suite)

@@ -44,8 +44,8 @@ class TestUserManagerCase(unittest.TestCase):
         self.assertEqual(0, actual_result['errno'])
         self.assertEqual(
             self.username,
-            actual_result.get['data'].get['username'])
-
+            # actual_result.get['data'].get['username'])
+            actual_result.get('username'))
     # case2:编辑用户
     def test02_edit(self):
         # new_user_name = 'xxxx007'
@@ -65,7 +65,7 @@ class TestUserManagerCase(unittest.TestCase):
         self.assertEqual(self.new_username, actual_result.get(
             'data').get('list')[0].get('username'))
 
-    # case4:删除用户
+    # case4:删除用户l
     def test04_delete(self):
         # 根据id来进行删除用户  也可以定义类变量 在下面的任何方法都可以使用
 
